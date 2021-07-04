@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: beige;
+    font-family: ubuntu, poppins, sans-serif;
+}
+
+.image{
+    text-align: center;
+}
+
+.text{
+    width: fit-content;
+    margin: auto;
+    margin-top: -2rem;
+}
+
+#right-leg, #left-leg, #head, #lower,
+#top{
+    animation: rightleg 2s linear infinite;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes rightleg
+{
+    from{
+        transform: translateX(0) translateY(0) rotateX(0)
+    }
+    to{
+        transform: translateX(-8px) translateY(-10px) rotateX(10deg)
+    }
+}
+
+#football{
+    animation: futball 2s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes futball{
+    from{
+        transform: rotateZ(0deg) translateX(0);
+        }
+    to{
+        transform: rotateZ(270deg) translateX(-7px);
+    }
+}
+
+
+#smoke{
+    animation: smoke 2s ease-out infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes smoke
+{
+    from{
+        transform: translateX(0) translateY(0)
+    }
+    to{
+        transform: translateX(5px) translateY(20px)
+    }
+}
+
+#left-hand{
+    animation: lefthand 2s linear infinite;
+    transform-origin: top;
+}
+
+@keyframes lefthand
+{
+    from{
+        transform: translateX(0) translateY(0);
+    }
+    to{
+        transform: translateX(-5px) translateY(-7px);
+    }
+}
+
+#right-hand{
+    animation: righthand 2s linear infinite;
+    transform-origin: top;
+}
+
+@keyframes righthand
+{
+    from{
+        transform: translateX(0) translateY(0);
+    }
+    to{
+        transform: translateX(-5px) translateY(-7px);
+    }
+}
+
+#img-line{
+    animation: img-line 2s ease-out infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes img-line
+{
+    from{
+        transform: translateY(0)
+    }
+    to{
+        transform: translateY(4.2px)
+    }
+}
+
+
+/* nav{
+    position: relative;
+    height: 10vh;
+} */
+
+.links{
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+/* .nav-links{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+} */
+
+.line{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: black;
+}
+
+.nav-links{
+    height: 30vh;
+    width:30%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+}
+
+.dropdown{
+    position: relative;
+    height: 10vh;
+}
+
+.navigation{
+    position: absolute;
+    cursor: pointer;
+    right: 7%;
+    top: 70%;
+    transform: translate(-7%, -70%);
+    display: column;
+}
+
+/* Change color of dropdown links on hover */
+.links:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .nav-links {display: flex;} 
+
+.dropdown:hover .navigation {display: none;}
+
+
+
